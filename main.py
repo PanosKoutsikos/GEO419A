@@ -2,7 +2,7 @@
 This file contains all functions that are used for execution
 '''
 
-## Import packages
+# Import packages
 import os
 import requests
 import zipfile
