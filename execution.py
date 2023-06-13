@@ -4,12 +4,7 @@ This file executes all functions from the main file
 
 # Import packages
 from datetime import datetime
-from url_path import *
-from data_download import *
-from log_scale import *
-from unzip import *
-from plot import *
-#from processing_img import *
+from main import *
 
 start_time = datetime.now()
 
