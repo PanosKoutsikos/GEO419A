@@ -6,11 +6,15 @@ This file contains all functions that are used for execution
 import os
 import requests
 import zipfile
-import os
 import glob
 import numpy as np
-#import rasterio as rio
-#from rasterio.plot import show
+from osgeo import gdal
+
+'''
+import rasterio as rio
+from rasterio.plot import show
+'''
+
 from matplotlib import pyplot as plt
 from matplotlib import colors, cm
 from matplotlib.ticker import FormatStrFormatter
@@ -39,14 +43,14 @@ def data_download(url, path):
 
     # check if the folder already exist
     if not os.path.isfile(file_path):
-        print('the file is being downloaded')
+        print('Your file is being downloaded. Grab some snacks, as this will take some time depending on the file size and your internet connection.')
         req = requests.get(url, stream=True)
         with open(file_path, 'wb') as gp:
             for chunk in req.iter_content(chunk_size=128):
                 gp.write(chunk)
 
     else:
-        print(f'Download file {file_name} already exists')
+        print(f'Download file {file_name} already exists. We can skip this boring step!')
 
 def unzip(url, path):
     """
@@ -77,7 +81,7 @@ def unzip(url, path):
         with zipfile.ZipFile(file_name, 'r') as zip_ref:
             zip_ref.extractall(unzip_folder)
             if not os.path.isfile(unzip_folder):
-                print('Unziping data')
+                print('Unzipping data... This may take a few minutes.')
 
     except FileExistsError:
         if FileExistsError:
@@ -86,9 +90,9 @@ def unzip(url, path):
                 with zipfile.ZipFile(file_name, 'r') as zip_ref:
                     zip_ref.extractall(unzip_folder)
                     if not os.path.isfile(unzip_folder):
-                        print(f'Unziping data')
+                        print(f'Unzipping data... This may take a few minutes.')
             else:
-                print(f'Folder {unzip_folder} and data already exists')
+                print(f'Great! This folder {unzip_folder} and data already exists.')
 
 
 def contrast(con_img):
@@ -211,41 +215,41 @@ def url_path():
 
     special_characters = "!@#$%^&*()+?=,<>"
 
-    print(f'\nWelcome to our small programme!')
+    print(f'\nWelcome to the Unzipper 3000!')
     print(f'First, please define the path of the working directory.')
     print(f'Example path for Windows: "C:/folder_name/"')
     print(f'Note that special characters such as {special_characters} are not allowed in the path name.\n')
     print(f'Type or copy the entire path to the working directory in the terminal/prompt. \n')
-    path = input("Enter your folder path: ")
+    path = input("Enter your folder path here: ")
 
     if any(scpec in special_characters for scpec in path):
-        print(f'Path contains special character(s). Please give a new path \n')
+        print(f'This path contains special character(s). Please give a new path \n')
         while any(scpec in special_characters for scpec in path):
             path = input()
             if os.path.exists(path):
-                print(f'Working directory is valid. \n')
+                print(f'Great! This working directory is valid. \n')
             else:
                 if not os.path.exists(path):
                     try:
                         os.makedirs(os.path.dirname(path))
-                        print(f'Working directory is created')
+                        print(f'Working directory is now created.')
                     except FileExistsError:
-                        print(f'Working directory already exists.')
+                        print(f'This working directory already exists.')
 
     else:
         if os.path.exists(path):
-            print(f'Working directory is valid. \n')
+            print(f'Great! This working directory is valid. \n')
         else:
             if not os.path.exists(path):
                 try:
                     os.makedirs(os.path.dirname(path))
-                    print(f'Working directory is created')
+                    print(f'Working directory is now created.')
                 except FileExistsError:
-                    print(f'Working directory already exists.')
+                    print(f'This working directory already exists.')
 
     # for the path
     print(f'\nNow please define the URL from which the data will be downloaded!')
-    print(f'The URL must ends on ".zip". Otherwise it can not be downloaded. \n')
-    url = input("Enter the URL: ")
+    print(f'The URL must end on ".zip", otherwise your data can not be extracted. \n')
+    url = input("Enter the URL here: ")
 
     return url, path
