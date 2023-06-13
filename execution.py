@@ -8,7 +8,6 @@ from main import *
 
 start_time = datetime.now()
 
-
 def main():
     """
     Main function of the program. It calls other functions to download, unzip, process and plot raster images.
