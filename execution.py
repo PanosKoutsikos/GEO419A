@@ -21,12 +21,12 @@ def main():
     --------
     """
 
-    url, path = url_path.url_path()
-    data_download.data_download(url, path)
-    unzip.unzip(url, path)
-    log_scale.log_scale(path, file_name)
-    contrast.contrast(con_img)
-    plot.plot(path)
+    url, path = url_path()
+    data_download(url, path)
+    unzip(url, path)
+    log_scale(path, file_name)
+    contrast(con_img)
+    plot(path)
 
     end_time = datetime.now()
     print(f"\n end-time =", end_time - start_time, "Hr:min:sec \n")

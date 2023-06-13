@@ -9,8 +9,8 @@ import zipfile
 import os
 import glob
 import numpy as np
-import rasterio as rio
-from rasterio.plot import show
+#import rasterio as rio
+#from rasterio.plot import show
 from matplotlib import pyplot as plt
 from matplotlib import colors, cm
 from matplotlib.ticker import FormatStrFormatter
@@ -40,9 +40,9 @@ def data_download(url, path):
     # check if the folder already exist
     if not os.path.isfile(file_path):
         print('the file is being downloaded')
-        req = request.get(url, stream=True)
+        req = requests.get(url, stream=True)
         with open(file_path, 'wb') as gp:
-            for chunk in r.iter_content(chunk_size=128):
+            for chunk in req.iter_content(chunk_size=128):
                 gp.write(chunk)
 
     else:
@@ -209,13 +209,14 @@ def url_path():
     """
     # for the path
 
-    special_characters = "!@#$%^&*()-+?=,<>"
+    special_characters = "!@#$%^&*()+?=,<>"
 
-    print(f'\n First step is to define the path of the working directory!')
+    print(f'\nWelcome to our small programme!')
+    print(f'First, please define the path of the working directory.')
     print(f'Example path for Windows: "C:/folder_name/"')
-    print(f'Special Characters like {special_characters} are not allowed in the path name \n')
+    print(f'Note that special characters such as {special_characters} are not allowed in the path name.\n')
     print(f'Type or copy the entire path to the working directory in the terminal/prompt. \n')
-    path = input("Enter the folder path: ")
+    path = input("Enter your folder path: ")
 
     if any(scpec in special_characters for scpec in path):
         print(f'Path contains special character(s). Please give a new path \n')
@@ -243,7 +244,7 @@ def url_path():
                     print(f'Working directory already exists.')
 
     # for the path
-    print(f'\n Secont step is to define the URL from which the data will be downloaded!')
+    print(f'\nNow please define the URL from which the data will be downloaded!')
     print(f'The URL must ends on ".zip". Otherwise it can not be downloaded. \n')
     url = input("Enter the URL: ")
 
