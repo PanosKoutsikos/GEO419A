@@ -245,6 +245,6 @@ def url_path():
     # for the path
     print(f'\n Secont step is to define the URL from which the data will be downloaded!')
     print(f'The URL must ends on ".zip". Otherwise it can not be downloaded. \n')
-    url = input("Enter the URL:  ")
+    url = input("Enter the URL: ")
 
     return url, path
