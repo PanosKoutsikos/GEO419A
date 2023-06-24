@@ -10,12 +10,12 @@ The aim of this work was to develop a functional and reproducible application th
 | **Version** |`1.21.5` |`3.0.2` |`1.2.10`   |`2.28.1`   |`3.5.3`      |
 
 This repository contains the following functions:
-- Fetching data from a URL (url_path.py)
-- Downloading data from given URL to the specified folder (data_download.py)
-- Unzipping compressed folder (unzip.py)
-- Convertion of the SAR acquisition to a NumPy array and logarithmic scaling of its values (log_scale.py)
-- Plotting and saving the visualisation as PDF (plot.py)
-- Running all funtions (main.py)
+- Fetching data from a URL `url_path.py`
+- Downloading data from given URL to the specified folder `data_download.py`
+- Unzipping compressed folder `unzip.py`
+- Convertion of the SAR acquisition to a NumPy array and logarithmic scaling of its values `log_scale.py`
+- Plotting and saving the visualisation as PDF `plot.py`
+- Running all funtions `main.py`
 
 ___
 ## Getting Started
