@@ -2,7 +2,7 @@
 This project was created as part of the Geo 419A - Modular Programming in Remote Sensing: Python Part I module at Friedrich Schiller University Jena by *Panagiotis Koutsikos* and *Gerasimos Papakostopoulos* and is supervised by *Prof. Dr. Christiane Schmullius*, *Martin Habermeyer*, and *Marco Wolsza*.
 
 ___
-## Quick info
+## Quick Info
 The aim of this work was to develop a functional and reproducible application that downloads, extracts and visualises a SAR scene from a zipped folder from a given URL. This could be successfully implemented by using the programming language Python and the following libraries:
 
 | Packages    | *Numpy* | *GDAL* |*Rasterio* |*Requests* |*Matplotlib* |
@@ -30,5 +30,5 @@ conda env create -f env_PK_GP.yml
 conda activate env_PK_GP
 ```
 ___
-## Running the code
+## Running the Code
 When you're done creating your environment, you can now run the code in your preferred IDE. Make sure that all files contained in this repository are in the same folder. By running the "main.py" file the code should start and the programme should give the expected outcome.
