@@ -1,2 +1,2 @@
 # GEO419A
-Hi
+This project was created 
