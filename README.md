@@ -32,6 +32,7 @@ conda activate GEO419A_env
 ___
 ## Running the Code
 When you're done creating your environment, you can now run the code in your preferred IDE. Make sure that all files contained in this repository are in the same folder. By running the "main.py" file the code should start and the programme should produce a visualisation of the data. \
+\
 Additionally, there is also the possibility of running the code through the terminal. In order to do so, first navigate to the folder where the script is located using the following code:
 ```python
 cd "C:\Your\Path"
