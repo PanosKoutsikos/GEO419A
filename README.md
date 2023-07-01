@@ -7,28 +7,36 @@ The aim of this work was to develop a functional and reproducible application th
 
 | Packages    | *Numpy* | *GDAL* |*Rasterio* |*Requests* |*Matplotlib* |
 | ----------- |:-------:|:------:|:---------:|:---------:|:-----------:|
-| **Version** |`1.21.5` |`3.0.2` |`1.2.10`   |`2.28.1`   |`3.5.3`      |
+| **Version** |`1.25.0` |`3.7.0` |`1.3.7`    |`2.31.0`   |`3.7.1`      |
 
 This repository contains the following functions:
 - Fetching data from a URL `url_path.py`
 - Downloading data from given URL to the specified folder `data_download.py`
 - Unzipping compressed folder `unzip.py`
 - Convertion of the SAR acquisition to a NumPy array and logarithmic scaling of its values `log_scale.py`
-- Plotting and saving the visualisation as PDF `plot.py`
+- Plotting and saving the visualisation as PNG `plot.py`
 - Running all funtions `main.py`
 
 ___
 ## Getting Started
-In order to smoothly run the code you may use our predefined python environment `env_PK_GP.yml` file by downloading the file from this repository.
-- First you need to create a new environment. Open the Anaconda prompt/terminal, make sure that the `env_PK_GP.yml` file is in the specified directory, and enter the following:
+In order to smoothly run the code you may use our predefined python environment `GEO419A_env.yml` file by downloading the file from this repository.
+- First you need to create a new environment. Open the Anaconda prompt/terminal, make sure that the `GEO419A_env.yml` file is in the specified directory, and enter the following:
 
 ```python
-conda env create -f env_PK_GP.yml
+conda env create -f GEO419A_env.yml
 ```
 - Then you can activate the created environment by entering:
 ```python
-conda activate env_PK_GP
+conda activate GEO419A_env
 ```
 ___
 ## Running the Code
-When you're done creating your environment, you can now run the code in your preferred IDE. Make sure that all files contained in this repository are in the same folder. By running the "main.py" file the code should start and the programme should give the expected outcome.
+When you're done creating your environment, you can now run the code in your preferred IDE. Make sure that all files contained in this repository are in the same folder. By running the "main.py" file the code should start and the programme should produce a visualisation of the data. \
+Additionally, there is also the possibility of running the code through the terminal. In order to do so, first navigate to the folder where the script is located using the following code:
+```python
+cd "C:\Your\Path"
+```
+You can then run the programme by executing the following:
+```python
+$ python main.py
+```
