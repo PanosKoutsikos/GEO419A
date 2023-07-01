@@ -1,5 +1,5 @@
 # GEO419A
-This project was created as part of the Geo 419A - Modular Programming in Remote Sensing: Python Part I module at Friedrich Schiller University Jena by *Panagiotis Koutsikos* and *Gerasimos Papakostopoulos* and is supervised by *Prof. Dr. Christiane Schmullius*, *Martin Habermeyer*, and *Marco Wolsza*.
+This project was created as part of the Geo 419A - Modular Programming in Remote Sensing: Python Part I module at Friedrich Schiller University Jena by ***Panagiotis Koutsikos*** and ***Gerasimos Papakostopoulos*** and is supervised by ***Prof. Dr. Christiane Schmullius***, ***Martin Habermeyer***, and ***Marco Wolsza***.
 
 ___
 ## Quick Info
