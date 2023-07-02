@@ -39,5 +39,5 @@ cd "C:\Your\Path"
 ```
 You can then run the programme by executing the following:
 ```python
-$ python main.py
+python main.py
 ```
